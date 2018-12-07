@@ -38,6 +38,8 @@ class User extends Model {
   projects() {
     return this.hasMany("App/Models/Project");
   }
+
+
 }
 
 module.exports = User;
