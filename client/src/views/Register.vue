@@ -3,12 +3,12 @@
     <v-layout row wrap>
       <v-flex xs6 offset-xs3>
         <h1>Register</h1>
-        <v-text-field 
-          label="Email" 
+        <v-text-field
+          label="Email"
           placeholder="Email..."
           :value="registerEmail"
           @input="setRegisterEmail"
-          ></v-text-field>
+        ></v-text-field>
 
         <v-text-field
           label="Password"
@@ -18,6 +18,7 @@
           :value="registerPassword"
           @input="setRegisterPassword"
         ></v-text-field>
+        <v-alert type="error" :value="registerError">{{ registerError }}</v-alert>
         <v-btn color="teal" dark @click="register">
           <v-icon>account_circle</v-icon>Register
         </v-btn>
@@ -27,25 +28,24 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex';
+import { mapState, mapMutations, mapActions } from "vuex";
 
 export default {
   computed: {
-    ...mapState('authentication', [
-      'registerEmail',
-      'registerPassword',
+    ...mapState("authentication", [
+      "registerEmail",
+      "registerPassword",
+      "registerError"
     ])
   },
   methods: {
-    ...mapMutations('authentication', [
-      'setRegisterEmail',
-      'setRegisterPassword',
+    ...mapMutations("authentication", [
+      "setRegisterEmail",
+      "setRegisterPassword"
     ]), //able to call this functions in this component
-  
-    ...mapActions('authentication', [
-      'register',
-    ]),
-  },
+
+    ...mapActions("authentication", ["register"])
+  }
 };
 </script>
 
