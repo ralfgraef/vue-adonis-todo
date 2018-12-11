@@ -62,6 +62,7 @@ export default {
     setRegisterEmail(state, email) {
       state.registerEmail = email;
     },
+
     setRegisterPassword(state, password) {
       state.registerPassword = password;
     },
