@@ -2,9 +2,7 @@
   <v-container>
     <v-layout>
       <v-flex xs4>
-        <Panel title="Projects">
-          <h1>TESTING</h1>
-        </Panel>
+        <Projects></Projects>
       </v-flex>
       <v-flex xs8 class="pl-4">
         <Panel title="Tasks">
@@ -16,5 +14,21 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+import Projects from "@/components/Projects.vue";
+import router from "../router";
+
+export default {
+  components: {
+    Projects
+  },
+  mounted() {
+    if (!this.isLoggedIn) {
+      return router.push("/login");
+    }
+  },
+  computed: {
+    ...mapGetters("authentication", ["isLoggedIn"])
+  }
+};
 </script>
