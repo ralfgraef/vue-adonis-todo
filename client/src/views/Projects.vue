@@ -14,21 +14,21 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import Projects from "@/components/Projects.vue";
-import router from "../router";
+import { mapGetters } from 'vuex';
+import Projects from '@/components/Projects.vue';
+import router from '../router';
 
 export default {
   components: {
-    Projects
+    Projects,
   },
   mounted() {
     if (!this.isLoggedIn) {
-      return router.push("/login");
+      return router.push('/login');
     }
   },
   computed: {
-    ...mapGetters("authentication", ["isLoggedIn",])
-  }
+    ...mapGetters('authentication', ['isLoggedIn']),
+  },
 };
 </script>

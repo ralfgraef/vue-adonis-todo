@@ -1,5 +1,5 @@
 import router from '../router';
-import HTTP from "../http";
+import HTTP from '../http';
 
 export default {
   namespaced: true,
@@ -29,7 +29,7 @@ export default {
           router.push('/');
         })
         .catch((error) => {
-          commit('setRegisterError', 'Fehler: ' + error.message);
+          commit('setRegisterError', `Fehler: ${error.message}`);
         });
     },
     login({ commit, state }) {
@@ -43,14 +43,14 @@ export default {
           router.push('/');
         })
         .catch((error) => {
-          commit('setLoginError', 'Fehler: ' + error.message);
+          commit('setLoginError', `Fehler: ${error.message}`);
         });
     },
   },
   getters: {
     isLoggedIn(state) {
       return !!state.token;
-    }
+    },
   },
   mutations: {
     setToken(state, token) {

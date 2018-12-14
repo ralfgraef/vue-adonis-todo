@@ -15,7 +15,7 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 sync(store, router);
 
-Vue.component('Panel', Panel); //global component
+Vue.component('Panel', Panel); // global component
 
 new Vue({
   router,

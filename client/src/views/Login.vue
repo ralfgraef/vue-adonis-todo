@@ -29,17 +29,17 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from "vuex";
+import { mapState, mapMutations, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState("authentication", ["loginEmail", "loginPassword", "loginError"])
+    ...mapState('authentication', ['loginEmail', 'loginPassword', 'loginError']),
   },
   methods: {
-    ...mapMutations("authentication", ["setLoginEmail", "setLoginPassword"]), //able to call this functions in this component
+    ...mapMutations('authentication', ['setLoginEmail', 'setLoginPassword']), // able to call this functions in this component
 
-    ...mapActions("authentication", ["login"])
-  }
+    ...mapActions('authentication', ['login']),
+  },
 };
 </script>
 

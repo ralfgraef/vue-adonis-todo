@@ -1,5 +1,5 @@
 // import router from '../router';
-import HTTP from "../http";
+import HTTP from '../http';
 
 export default {
   namespaced: true,
@@ -17,7 +17,7 @@ export default {
           commit('appendProject', data);
           commit('setNewProjectName', null);
         });
-    }
+    },
   },
   getters: {
 

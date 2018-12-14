@@ -19,15 +19,16 @@
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from "vuex";
+import { mapActions, mapMutations, mapState } from 'vuex';
+
 export default {
   computed: {
-    ...mapState("projects", ["newProjectName", "projects"])
+    ...mapState('projects', ['newProjectName', 'projects']),
   },
   methods: {
-    ...mapMutations("projects", ["setNewProjectName"]),
-    ...mapActions("projects", ["createProject"])
-  }
+    ...mapMutations('projects', ['setNewProjectName']),
+    ...mapActions('projects', ['createProject']),
+  },
 };
 </script>
 
