@@ -1,5 +1,4 @@
 const InvalidAccessException = use('App/Exceptions/InvalidAccessException')
-const ResourceNotExistException = use('App/Exceptions/otExist')
 const ResourceNotExistException = use('App/Exceptions/ResourceNotExistException')
 
 class AuthorizationService {

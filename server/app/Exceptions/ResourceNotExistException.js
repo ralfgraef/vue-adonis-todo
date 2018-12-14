@@ -9,7 +9,7 @@ class ResourceNotExistException extends LogicalException {
   handle(error, { response }) {
     return response.status(404).json({
       error: 'the resource did not exist',
-    })
+    });
   }
 }
 

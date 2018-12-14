@@ -28,7 +28,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("authentication", ["isLoggedIn"])
+    ...mapGetters("authentication", ["isLoggedIn",])
   }
 };
 </script>
