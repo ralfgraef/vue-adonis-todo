@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="teal" dark fixed>
+  <v-toolbar color="blue-grey" dark fixed>
     <v-toolbar-title class="mr-4">RALFs TODO</v-toolbar-title>
     <v-toolbar-items>
       <v-btn flat v-if="isLoggedIn">
