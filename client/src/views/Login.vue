@@ -20,7 +20,7 @@
           @input="setLoginPassword"
         ></v-text-field>
         <v-alert type="error" :value="loginError">{{ loginError }}</v-alert>
-        <v-btn color="teal" dark @click="login">
+        <v-btn color="blue-grey dark-2" dark @click="login">
           <v-icon>fingerprint</v-icon>Login
         </v-btn>
       </v-flex>
