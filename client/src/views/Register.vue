@@ -19,7 +19,7 @@
           @input="setRegisterPassword"
         ></v-text-field>
         <v-alert type="error" :value="registerError">{{ registerError }}</v-alert>
-        <v-btn color="teal" dark @click="register">
+        <v-btn color="blue-grey dark-2" dark @click="register">
           <v-icon>account_circle</v-icon>Register
         </v-btn>
       </v-flex>
