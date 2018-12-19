@@ -11,6 +11,7 @@
             @input="setRegisterEmail"
           ></v-text-field>
 
+<<<<<<< HEAD
           <v-text-field
             label="Password"
             placeholder="Password..."
@@ -24,6 +25,20 @@
             <v-icon>account_circle</v-icon>Register
           </v-btn>
         </v-form>
+=======
+        <v-text-field
+          label="Password"
+          placeholder="Password..."
+          type="password"
+          autocomplete="new-password"
+          :value="registerPassword"
+          @input="setRegisterPassword"
+        ></v-text-field>
+        <v-alert type="error" :value="registerError">{{ registerError }}</v-alert>
+        <v-btn color="blue-grey dark-2" dark @click="register">
+          <v-icon>account_circle</v-icon>Register
+        </v-btn>
+>>>>>>> e893d69de99fe7328f3cf5a683c1541c947a53ea
       </v-flex>
     </v-layout>
   </v-container>
