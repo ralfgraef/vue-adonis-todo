@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs6 offset-xs3>
         <h1>Login</h1>
-
+        
         <v-text-field
           label="Email"
           placeholder="Email..."
@@ -20,7 +20,11 @@
           @input="setLoginPassword"
         ></v-text-field>
         <v-alert type="error" :value="loginError">{{ loginError }}</v-alert>
-        <v-btn color="teal" dark @click="login">
+<<<<<<< HEAD
+        <v-btn color="blue-grey darken-2" dark @click="login">
+=======
+        <v-btn color="blue-grey dark-2" dark @click="login">
+>>>>>>> e893d69de99fe7328f3cf5a683c1541c947a53ea
           <v-icon>fingerprint</v-icon>Login
         </v-btn>
       </v-flex>

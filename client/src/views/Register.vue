@@ -2,14 +2,30 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs6 offset-xs3>
+        <v-form class="form">
         <h1>Register</h1>
-        <v-text-field
-          label="Email"
-          placeholder="Email..."
-          :value="registerEmail"
-          @input="setRegisterEmail"
-        ></v-text-field>
+          <v-text-field
+            label="Email"
+            placeholder="Email..."
+            :value="registerEmail"
+            @input="setRegisterEmail"
+          ></v-text-field>
 
+<<<<<<< HEAD
+          <v-text-field
+            label="Password"
+            placeholder="Password..."
+            type="password"
+            autocomplete="new-password"
+            :value="registerPassword"
+            @input="setRegisterPassword"
+          ></v-text-field>
+          <v-alert type="error" :value="registerError">{{ registerError }}</v-alert>
+          <v-btn color="blue-grey darken-2" dark @click="register">
+            <v-icon>account_circle</v-icon>Register
+          </v-btn>
+        </v-form>
+=======
         <v-text-field
           label="Password"
           placeholder="Password..."
@@ -19,9 +35,10 @@
           @input="setRegisterPassword"
         ></v-text-field>
         <v-alert type="error" :value="registerError">{{ registerError }}</v-alert>
-        <v-btn color="teal" dark @click="register">
+        <v-btn color="blue-grey dark-2" dark @click="register">
           <v-icon>account_circle</v-icon>Register
         </v-btn>
+>>>>>>> e893d69de99fe7328f3cf5a683c1541c947a53ea
       </v-flex>
     </v-layout>
   </v-container>
@@ -50,4 +67,8 @@ export default {
 </script>
 
 <style>
+.form {
+  border: 1px solid #000;
+  padding: 10px;
+}
 </style>
